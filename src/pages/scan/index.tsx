@@ -1,11 +1,11 @@
-import VideoCapture from "../../components/video-capture";
+import dynamic from 'next/dynamic';
 
-function Scan() {
+
+export default function Page() {
+  const NonSSRVideoCapture = dynamic(() => import('@/components/video-capture'), { ssr: false });
   return (
     <div>
-      <VideoCapture />
+      <NonSSRVideoCapture />
     </div>
   );
 }
-
-export default Scan;

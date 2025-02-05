@@ -1,8 +1,11 @@
+"use client"
+
 import { useEffect, useRef, useState } from "react";
 import "@/dynasoft.config"; // import side effects. The license, engineResourcePath, so on.
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
 import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
 import { MultiFrameResultCrossFilter } from "dynamsoft-utility";
+import dynamic from "next/dynamic";
 
 const componentDestroyedErrorMsg = "VideoCapture Component Destroyed";
 

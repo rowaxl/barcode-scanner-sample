@@ -10,8 +10,6 @@ CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
  * To use the library, you need to first specify a license key using the API "initLicense()" as shown below.
  */
 
-console.log("DYNASOFT_LICENSE_KEY: ", process.env.NEXT_PUBLIC_DYNASOFT_LICENSE_KEY);
-
 LicenseManager.initLicense(process.env.NEXT_PUBLIC_DYNASOFT_LICENSE_KEY ?? '', {
   executeNow: true,
 });
