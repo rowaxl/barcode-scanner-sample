@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import "../globals.css";
-import "./print-style.css";
 
 export default function Page() {
   useEffect(() => {
