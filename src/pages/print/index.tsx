@@ -10,7 +10,7 @@ export default function Page() {
     if (contentRef.current) {
       reactToPrintFunction()
     }
-  }, [])
+  }, [contentRef])
 
   return (
     <main className="print-page">
