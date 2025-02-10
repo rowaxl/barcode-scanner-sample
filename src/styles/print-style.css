@@ -1,5 +1,6 @@
 @page {
   size: letter;
+  page-orientation: rotate-left;
   margin: 0;
 }
 
