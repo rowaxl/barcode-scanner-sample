@@ -6,6 +6,11 @@
 .print-page {
   width: 11in;
   height: 8.5in;
+}
+
+.print-content {
+  width: calc(11in - 30mm);
+  height: calc(8.5in - 36mm);
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
@@ -14,4 +19,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media print {
+  .print-page {
+    height: max-content;
+  }
 }
