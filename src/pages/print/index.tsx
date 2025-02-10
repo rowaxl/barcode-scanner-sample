@@ -1,26 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 export default function Page() {
-  const [isSafari, setIsSafari] = useState(false);
+
+  const contentRef = useRef<HTMLDivElement>(null)
+  const reactToPrintFunction = useReactToPrint({ contentRef })
+
   useEffect(() => {
-    if (navigator) {
-      const isSafarivalue = navigator.userAgent &&
-        navigator.userAgent.indexOf('CriOS') == -1 &&
-        navigator.userAgent.indexOf('FxiOS') == -1;
-
-      setIsSafari(!!isSafarivalue);
-    }
-
-    if (window.print) {
-      window.print();
+    if (contentRef.current) {
+      reactToPrintFunction()
     }
   }, [])
 
-  
-
   return (
-    <main className="print-page" data-device={isSafari ? 'iphone' : 'chrome'}>
-      <div className="print-content">
+    <main className="print-page">
+      <div className="print-content" ref={contentRef}>
         <h1>Sample Letter Size Print</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 

@@ -26,22 +26,6 @@ html, body {
   gap: 20px;
 }
 
-[data-device='iphone'].print-page {
-  width: 100lvh;
-  height: 100lvw;
-  position: relative;
-}
-
-[data-device='iphone'] .print-content {
-  width: 100lvh;
-  height: 100lvw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-72%, -11%) rotate(90deg);
-  box-sizing: content-box;
-}
-
 @media print {
   .print-page {
     height: max-content;

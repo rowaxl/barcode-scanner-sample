@@ -18,7 +18,8 @@
     "dynamsoft-utility": "^1.4.32",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-to-print": "^3.0.5"
   },
   "devDependencies": {
     "@types/node": "^20",
