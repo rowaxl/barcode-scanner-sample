@@ -8,7 +8,9 @@ export default function Page() {
 
   useEffect(() => {
     if (contentRef.current) {
-      reactToPrintFunction()
+      setTimeout(() => {
+        reactToPrintFunction()
+      }, 1000)
     }
   }, [contentRef])
 
