@@ -1,5 +1,5 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import "./globals.css";
 import Link from "next/link";
 
 export default function Home() {
@@ -8,6 +8,9 @@ export default function Home() {
       <main className={styles.main}>
         <Link href="/scan">
           <h3>Start Scan</h3>
+        </Link>
+        <Link href="/print">
+          <h3>Print</h3>
         </Link>
       </main>
     </div>
