@@ -1,13 +1,11 @@
 @page {
   size: letter;
-  page-orientation: rotate-left;
   margin: 0;
 }
 
 .print-page {
   width: 11in;
   height: 8.5in;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;

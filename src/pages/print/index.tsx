@@ -8,7 +8,7 @@ export default function Page() {
   }, [])
 
   return (
-    <main style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", padding: "20px" }}>
+    <main style={{ width: "100%", height: "100%", margin: 'auto', padding: "5px" }}>
       <div className="print-page">
         <h1>Sample Letter Size Print</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
